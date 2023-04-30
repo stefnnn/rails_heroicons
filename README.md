@@ -1,21 +1,24 @@
-[Leer en Español](README-spanish.md)
+# Rails Heroicons 2.0
 
-# Rails Heroicons
 Use icons from [heroicons.com](https://heroicons.com) in your Rails applications.
+This is a fork from https://github.com/andrewjmead/rails_heroicons, which hasn't been updated with new icons in a while. All credits to @andrewjmead.
 
 ## Installation
+
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'rails_heroicons', '~> 0.6.0'
+gem 'rails_heroicons', 'github:stefnnn/rails_heroicon'
 ```
 
 And then execute:
+
 ```bash
 $ bundle
 ```
 
 Or install it yourself as:
+
 ```bash
 $ gem install rails_heroicons
 ```
@@ -58,16 +61,16 @@ This will embed the following HTML to render the icon:
 
 ### Picking an icon style
 
-The official Heroicons icons support two different styles. On [heroicons.com](https://heroicons.com) they refer to these as medium and small. Medium icons are outlined icons with no fill. Small icons are solid icons with a solid fill. 
+The official Heroicons icons support two different styles. On [heroicons.com](https://heroicons.com) they refer to these as medium and small. Medium icons are outlined icons with no fill. Small icons are solid icons with a solid fill.
 
-Behind the scenes, the offical [Heroicon repo](https://github.com/tailwindlabs/heroicons) refers to medium icons as outlined icons. Small icons are referred to as solid icons. That naming convention makes more sense to me than medium vs small as these icons could be resized with CSS anyway. 
+Behind the scenes, the offical [Heroicon repo](https://github.com/tailwindlabs/heroicons) refers to medium icons as outlined icons. Small icons are referred to as solid icons. That naming convention makes more sense to me than medium vs small as these icons could be resized with CSS anyway.
 
 Anyways...
 
 You can use the `style` option to customize the icon style. There are two valid values:
 
-* `:solid` - This is the default value. This render a solid icon (referred to as small on [heroicons.com](https://heroicons.com))
-* `:outline` - This will render an outlined icon (referred to as medium on  [heroicons.com](https://heroicons.com))
+- `:solid` - This is the default value. This render a solid icon (referred to as small on [heroicons.com](https://heroicons.com))
+- `:outline` - This will render an outlined icon (referred to as medium on [heroicons.com](https://heroicons.com))
 
 You can use `style` to switch to and outlined version of any icon:
 
@@ -85,4 +88,5 @@ This will embed the following HTML to render the icon:
 ```
 
 ## License
+
 The gem is available as open source under the terms of the [MIT License](https://opensource.org/licenses/MIT).
