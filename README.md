@@ -8,7 +8,7 @@ This is a fork from https://github.com/andrewjmead/rails_heroicons, which hasn't
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'rails_heroicons', 'github:stefnnn/rails_heroicon'
+gem 'rails_heroicons', git: 'https://github.com/stefnnn/rails_heroicons.git'
 ```
 
 And then execute:
