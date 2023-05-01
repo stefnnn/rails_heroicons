@@ -1,5 +1,3 @@
-require 'nokogiri'
-
 module RailsHeroicons
   class IconNotFound < Exception
   end
@@ -15,10 +13,7 @@ module RailsHeroicons
       end
 
       if class_name.present?
-        frag = Nokogiri::HTML.fragment(file_data)
-        frag.child.set_attribute('class', class_name)
-        frag.child.set_attribute('alt', name)
-        file_data = frag.to_s
+        file_data.sub!(/<svg/, "<svg class=\"#{class_name}\" alt=\"#{name}\"")
       end
 
       file_data.html_safe
