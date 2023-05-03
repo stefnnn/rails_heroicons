@@ -1,4 +1,4 @@
-require 'rails_heroicons/icons'
+require "rails_heroicons/icons"
 require "rails_heroicons/railtie"
 
 module RailsHeroicons
@@ -11,9 +11,9 @@ module RailsHeroicons
   end
 
   module ViewHelpers
-    def heroicon(name, style: :solid, class_name: '')
+    def heroicon(name, style: :solid, **args)
       icons = RailsHeroicons::Icons.new
-      icons.icon(name, style, class_name)
+      icons.icon(name, style, class_name: args[:class])
     end
   end
 end
