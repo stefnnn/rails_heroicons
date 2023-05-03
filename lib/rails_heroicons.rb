@@ -11,9 +11,8 @@ module RailsHeroicons
   end
 
   module ViewHelpers
-    def heroicon(name, style: :solid, **args)
-      icons = RailsHeroicons::Icons.new
-      icons.icon(name, style, class_name: args[:class])
+    def heroicon(name, **args)
+      RailsHeroicons::Icons.new.icon(name, **args)
     end
   end
 end

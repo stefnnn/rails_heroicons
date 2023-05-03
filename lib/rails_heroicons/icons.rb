@@ -3,7 +3,8 @@ module RailsHeroicons
   end
 
   class Icons
-    def icon(name, style, class_name)
+    def icon(name, **args)
+      style = args.fetch(:style, "solid")
       file_path = RailsHeroicons.root("lib/rails_heroicons/icons/#{style}/#{name}.svg")
 
       begin
@@ -11,6 +12,8 @@ module RailsHeroicons
       rescue
         raise RailsHeroicons::IconNotFound
       end
+
+      class_name = args.fetch(:class_name, args.fetch(:class, nil))
 
       if class_name.present?
         file_data.sub!(/<svg/, "<svg class=\"#{class_name}\" alt=\"#{name}\"")
