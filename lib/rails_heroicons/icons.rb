@@ -14,10 +14,8 @@ module RailsHeroicons
       end
 
       class_name = args.fetch(:class_name, args.fetch(:class, nil))
-
-      if class_name.present?
-        file_data.sub!(/<svg/, "<svg class=\"#{class_name}\" alt=\"#{name}\"")
-      end
+      label = args.fetch(:label, name)
+      file_data.sub!(/<svg/, "<svg class=\"#{class_name}\" arial-label=\"#{label}\"")
 
       file_data.html_safe
     end
